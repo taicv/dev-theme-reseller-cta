@@ -24,16 +24,16 @@ define( 'TRC_ENDPOINT_DOMAIN', 'https://thewebgo.com' );
  * These values will be used when the API request fails or returns no data
  */
 // Default reseller website URL
-define( 'TRC_DEFAULT_WEBSITE', 'https://themewpgiare.com/' );
+define( 'TRC_DEFAULT_WEBSITE', 'https://thewebgo.com/' );
 
 // Default reseller phone number
 define( 'TRC_DEFAULT_PHONE', '0989 072 072' );
 
 // Default reseller name/nickname
-define( 'TRC_DEFAULT_NAME', 'themewpgiare.com' );
+define( 'TRC_DEFAULT_NAME', 'thewebgo.com' );
 
 // Default reseller name/nickname
-define( 'TRC_DEFAULT_MESSAGE', 'Bạn đang xem demo từ themewpgiare.com' );
+define( 'TRC_DEFAULT_MESSAGE', 'Bạn đang xem demo từ thewebgo.com' );
 
 /**
  * Additional Configuration Options
