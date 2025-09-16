@@ -1,0 +1,72 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+## 🏆 **WordPress.org Directory Submission Priorities**
+- **STRICT WordPress Coding Standards (WPCS)** compliance
+- **Use WordPress native functions** instead of hardcoded solutions
+- **Follow WordPress best practices** for security, performance, and maintainability
+- **Avoid hardcoding** - use WordPress functions and APIs
+- **Security first** - proper sanitization, validation, and nonce verification
+- **No external dependencies** - use only WordPress core functions
+- **Proper plugin structure** following WordPress guidelines
+
+## 🔒 **WordPress Security Standards**
+- **Always use nonces** for form submissions and AJAX requests
+- **Sanitize ALL input** using WordPress sanitization functions
+- **Validate ALL data** before processing
+- **Escape ALL output** using WordPress escaping functions
+- **Check user capabilities** before allowing actions
+- **Use WordPress database methods** (prepare statements, etc.)
+- **Follow principle of least privilege**
+
+### **Required Security Functions**
+- `wp_nonce_field()`, `wp_verify_nonce()` for form security
+- `sanitize_text_field()`, `sanitize_email()` for input sanitization
+- `esc_html()`, `esc_attr()`, `esc_url()` for output escaping
+- `current_user_can()` for capability checks
+- `$wpdb->prepare()` for database queries
+
+## 💻 **WordPress Coding Standards (WPCS)**
+- **Use WordPress native functions** over custom implementations
+- **Follow WordPress naming conventions** for functions, classes, constants
+- **Proper indentation and spacing** (tabs for indentation, spaces for alignment)
+- **Comment code appropriately** using WordPress documentation standards
+- **Use WordPress hooks and filters** for extensibility
+- **No PHP short tags** - use full `<?php` tags
+- **End files with newline**
+
+### **WordPress Function Usage**
+- Use `wp_filesystem()` instead of direct file operations
+- Use `wp_remote_get()` instead of cURL
+- Use `wp_schedule_event()` instead of custom cron
+- Use `add_action()`, `add_filter()` for hooks
+- Use `wp_enqueue_script()`, `wp_enqueue_style()` for assets
+- Use `get_option()`, `update_option()` for settings
+
+## 🚀 **Development Workflow**
+- **Test with WordPress.org Plugin Check** tool
+- **Validate WPCS compliance** using CodeSniffer
+- **Test on minimum WordPress version** (5.0)
+- **Test on latest WordPress version** (6.8)
+- **Security review** all user inputs and outputs
+- **Performance testing** with large datasets
+
+## 📝 **Documentation Standards**
+- **Update readme.txt** for WordPress.org format
+- **Inline code documentation** following WordPress standards
+- **Security notes** for any special configurations
+- **Installation instructions** for wp-config.php inclusion
+- **Changelog** following semantic versioning
+
+## 📋 **WordPress.org Compliance Checklist**
+- ✅ **No hardcoded paths** - use WordPress path functions
+- ✅ **No direct file access** - use WordPress filesystem API
+- ✅ **Proper security measures** - nonces, sanitization, escaping
+- ✅ **WordPress coding standards** - WPCS compliant
+- ✅ **No external dependencies** - WordPress core only
+- ✅ **Proper plugin headers** in main file
+- ✅ **GPL v2 license** compatibility
+- ✅ **No premium/paid features** in base plugin
+- ✅ **Clean uninstall** - remove all data when requested
