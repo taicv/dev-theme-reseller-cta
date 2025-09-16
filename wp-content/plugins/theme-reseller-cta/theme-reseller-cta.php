@@ -66,19 +66,66 @@ function trc_enqueue_frontend_assets() {
 		array(
 			'apiUrl'         => defined( 'TRC_ENDPOINT_DOMAIN' ) ? TRC_ENDPOINT_DOMAIN . "/wp-json/api/v1/reseller/" : '/wp-json/api/v1/reseller/',
 			'defaultWebsite' => defined( 'TRC_DEFAULT_WEBSITE' ) ? TRC_DEFAULT_WEBSITE : 'https://thewebgo.com/',
-			'defaultPhone'   => defined( 'TRC_DEFAULT_PHONE' ) ? TRC_DEFAULT_PHONE : '0989 072 072',
+			'defaultPhone'   => defined( 'TRC_DEFAULT_PHONE' ) ? TRC_DEFAULT_PHONE : '0988 888 888',
 			'defaultName'    => defined( 'TRC_DEFAULT_NAME' ) ? TRC_DEFAULT_NAME : 'thewebgo.com',
 			'buttonPosition' => defined( 'TRC_BUTTON_POSITION' ) ? TRC_BUTTON_POSITION : 'bottom-right',
 			'buttonColor'    => defined( 'TRC_BUTTON_COLOR' ) ? TRC_BUTTON_COLOR : '#007cba',
 			'buttonSpacing'  => defined( 'TRC_BUTTON_SPACING' ) ? TRC_BUTTON_SPACING : '10',
 			'enableButton'   => defined( 'TRC_ENABLE_BUTTON' ) ? TRC_ENABLE_BUTTON : true,
 			'modalBackgroundColor' => defined( 'TRC_MODAL_BACKGROUND_COLOR' ) ? TRC_MODAL_BACKGROUND_COLOR : '#1e73be',
-			'defaultMessage' => defined( 'TRC_DEFAULT_MESSAGE' ) ? TRC_DEFAULT_MESSAGE : 'Bạn đang xem demo từ thewebgo.com',
+			'defaultMessage' => defined( 'TRC_DEFAULT_MESSAGE' ) ? TRC_DEFAULT_MESSAGE : 'Bạn đang xem demo từ',
 		)
 	);
 
 	wp_enqueue_script( 'theme-reseller-cta' );
 }
 add_action( 'wp_enqueue_scripts', 'trc_enqueue_frontend_assets' );
+
+
+
+add_action('rest_api_init', 'theme_reseller_register_reseller_endpoint');
+
+function theme_reseller_register_reseller_endpoint() {
+    register_rest_route('api/v1', '/reseller/(?P<id>\d+)', array(
+        'methods' => 'GET',
+        'callback' => 'theme_reseller_get_reseller_name',
+        'permission_callback' => '__return_true', // Public access
+        'args' => array(
+            'id' => array(
+                'validate_callback' => function($param, $request, $key) {
+                    return is_numeric($param);
+                }
+            ),
+        ),
+    ));
+}
+
+function theme_reseller_get_reseller_name($request) {
+    $user_id = (int) $request['id'];
+    $user = get_user_by('ID', $user_id);
+    
+    if (!$user) {
+        return new WP_Error('user_not_found', 'Reseller not found', array('status' => 404));
+    }
+
+    $billing_phone = get_user_meta($user_id, 'billing_phone', true);
+    $billing_phone = is_string($billing_phone) ? sanitize_text_field($billing_phone) : '';
+
+
+    nocache_headers(); 
+    return rest_ensure_response(array(
+        'code'    => 'success',
+        'message' => 'Reseller found successfully',
+        'data'    => array(
+            'status' => 200,
+            'reseller' => array(
+                'id'            => $user->ID,
+                'nickname'      => $user->nickname,
+                'billing_phone' => $billing_phone,
+                'url'          => $user->user_url,
+            )
+        )
+    ));
+}
 
 
