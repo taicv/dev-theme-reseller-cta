@@ -56,7 +56,7 @@
             height: 20px;
             border-radius: 0;
             border: none;
-            color: white;
+            color: ${MODAL_BACKGROUND_COLOR};
             font-size: 12px;
             cursor: pointer;
             z-index: 9999;
@@ -64,6 +64,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 0;
+            text-transform: lowercase;
         }
         .trc-modal {
             position: fixed;
@@ -143,7 +145,7 @@
     function createFloatButton() {
         const btn = document.createElement('button');
         btn.className = 'trc-float-btn';
-        btn.innerHTML = 'ℹ️';
+        btn.innerHTML = '[i]';
         btn.title = 'Contact Reseller';
         btn.onclick = showModal;
         document.body.appendChild(btn);

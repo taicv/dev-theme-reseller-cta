@@ -74,3 +74,4 @@ wp-content/debug.log
 /vendor/
 /composer.lock
 /wp-content/mu-plugins/mu-grabwp-tenancy.php
+wp-content/plugins/theme-reseller-cta.zip
