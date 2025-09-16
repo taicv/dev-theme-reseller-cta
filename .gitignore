@@ -1,0 +1,76 @@
+/*Wordpress Directories*/
+/wp-admin
+/wp-includes
+
+/*Wordpress Files*/
+/wp-activate.php
+/index.php
+/license.txt
+/local-xdebuginfo.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config-sample.php
+/wp-config.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+/.htaccess
+/readme.html
+/wp-config.php
+wp-content/debug.log
+
+/*Wordpress Themes*/
+/wp-content/themes/index.php
+/wp-content/themes/twentytwentyfive/
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/astra/
+
+/*Wordpress Plugins*/
+/wp-content/plugins/index.php
+/wp-content/plugins/plugin-check/
+/wp-content/plugins/astra-sites/
+/wp-content/plugins/all-in-one-wp-migration/
+/wp-content/plugins/cartflows/
+/wp-content/plugins/duplicate-post/
+/wp-content/plugins/easy-digital-downloads/
+/wp-content/plugins/elementor/
+/wp-content/plugins/header-footer-elementor/
+/wp-content/plugins/imsanity/
+/wp-content/plugins/latepoint/
+/wp-content/plugins/safe-svg/
+/wp-content/plugins/sqlite-database-integration/
+/wp-content/plugins/surecart/
+/wp-content/plugins/suremails/
+/wp-content/plugins/surerank/
+/wp-content/plugins/ultimate-addons-for-gutenberg/
+/wp-content/plugins/updraftplus/
+/wp-content/plugins/variation-swatches-woo/
+/wp-content/plugins/woo-cart-abandonment-recovery/
+/wp-content/plugins/woocommerce/
+/wp-content/plugins/woocommerce-payments/
+/wp-content/plugins/wpforms-lite/
+/wp-content/plugins/wp-live-chat-support/
+
+/*Wordpress Content*/
+/wp-content/index.php
+
+/*Current Project*/
+
+/wp-content/uploads/
+/wp-content/grabwp/
+/wp-content/grabwp/tenants.php
+/wp-content/plugins/grabwp-tenancy/grabwp-tenancy.zip
+/wp-content/languages/
+
+
+/** Ignore for project */
+/vendor/
+/composer.lock
+/wp-content/mu-plugins/mu-grabwp-tenancy.php
