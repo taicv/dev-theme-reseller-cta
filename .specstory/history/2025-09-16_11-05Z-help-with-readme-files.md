@@ -837,7 +837,58 @@ Now I understand the rich features that have been added! Let me update both read
 
 ---
 
+## Todo List
 
+- [x] Update readme.txt with new rich features
+- [x] Update README.md with new rich features
+
+---
+
+Perfect! I've completely updated both documentation files to showcase the rich new features. Here's what I've highlighted:
+
+## 🚀 **Updated Documentation with Rich Features**
+
+### ✨ **Key Features Highlighted:**
+
+#### 1. **🎨 Config File Flexibility**
+- **Custom HTML Templates** - Complete control over button and modal HTML
+- **Custom CSS Styling** - Full CSS customization with dynamic variables
+- **Template Variables** - Dynamic content replacement system (`{NICKNAME}`, `{BILLING_PHONE}`, etc.)
+
+#### 2. **🔄 Unlimited API Response Mapping**
+- **Flexible Field Mapping** - Map ANY number of fields from ANY API structure
+- **Dot Notation Support** - Access nested data: `user.profile.contact.phone`
+- **No Limits** - Support for any response format and unlimited fields
+- **Smart Fallbacks** - Automatic default values when fields are missing
+
+#### 3. **⚙️ Flexible Response Data Setup**
+- **Any API Structure** - Works with any JSON response format
+- **Custom Field Mapping** - Configure exactly how to extract data
+- **Template Variable System** - Use mapped fields in HTML/CSS templates
+- **Enterprise-Level Configuration** - Professional-grade flexibility
+
+#### 4. **📝 WooCommerce Update Instructions**
+- Clear step-by-step process for resellers
+- Explains how to update nickname, website, and phone
+- Notes immediate propagation to demo sites
+
+## 🎯 **Documentation Structure:**
+
+### **readme.txt** (WordPress.org focused)
+- ✅ Rich feature overview
+- ✅ Complete configuration examples
+- ✅ Template customization guide
+- ✅ API mapping examples
+- ✅ WooCommerce update process
+
+### **README.md** (Developer focused)
+- ✅ Visual feature highlights with emojis
+- ✅ Code examples for all customizations
+- ✅ Advanced configuration scenarios  
+- ✅ Performance and enterprise features
+- ✅ Multiple operation modes
+
+Both files now properly showcase the enterprise-level capabilities of your improved plugin!
 
 ---
 
