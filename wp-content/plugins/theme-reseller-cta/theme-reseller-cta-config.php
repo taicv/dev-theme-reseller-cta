@@ -42,10 +42,10 @@ define( 'TRC_DEFAULT_MESSAGE', 'Bạn đang xem demo từ' );
 define( 'TRC_BUTTON_POSITION', 'bottom-right' );
 
 // Button color (hex color code)
-define( 'TRC_BUTTON_COLOR', '#ffffff' );
+define( 'TRC_BUTTON_COLOR', '#1e73be' );
 
 // Modal background color (hex color code)
-define( 'TRC_MODAL_BACKGROUND_COLOR', '#1e73be' );
+define( 'TRC_MODAL_BACKGROUND_COLOR', '#ffffff' );
 
 // Button spacing (px)
 define( 'TRC_BUTTON_SPACING', '0' );
