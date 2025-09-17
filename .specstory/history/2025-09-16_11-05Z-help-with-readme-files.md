@@ -782,3 +782,62 @@ The instructions now correctly guide users to their WooCommerce account page rat
 
 ---
 
+_**User (2025-09-17 06:00Z)**_
+
+we improve plugin with rich feature, help me update the readme file. highlight on how to
+1. config file flexibility 
+- html, css and default content
+- reseller info maping with remote api with no limit
+2. config to flexibility on how to setup response reseller data for remote
+3. For reseller, How to update their infomation on woocommerce
+
+---
+
+_**Assistant**_
+
+I'll help you update the readme files to highlight the new rich features. Let me first examine the current plugin files to understand the improvements made.
+
+---
+
+Read file: undefined
+
+---
+
+Read file: undefined
+
+---
+
+Read file: undefined
+
+---
+
+Now I understand the rich features that have been added! Let me update both readme files to highlight these new capabilities.
+
+---
+
+## Todo List
+
+- [-] Update readme.txt with new rich features
+- [ ] Update README.md with new rich features
+
+---
+
+
+
+---
+
+## Todo List
+
+- [x] Update readme.txt with new rich features
+- [-] Update README.md with new rich features
+
+---
+
+
+
+---
+
+
+
+---
+
